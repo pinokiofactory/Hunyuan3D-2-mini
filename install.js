@@ -3,7 +3,10 @@ module.exports = {
     {
       method: "shell.run",
       params: {
-        message: "conda install -y -c conda-forge ninja"
+        message: [
+//          "conda install -y -c conda-forge ninja",
+          "conda install -y -c anaconda vs2019_win-64"
+        ]
       }
     },
     // Edit this step to customize the git repository to use
@@ -11,7 +14,8 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "git clone https://github.com/deepbeepmeep/Hunyuan3D-2GP app",
+          //"git clone https://github.com/deepbeepmeep/Hunyuan3D-2GP app",
+          "git clone https://github.com/Tencent/Hunyuan3D-2 app"
         ]
       }
     },
