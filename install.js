@@ -1,11 +1,17 @@
 module.exports = {
   run: [
+    {
+      method: "shell.run",
+      params: {
+        message: "conda install -y -c conda-forge ninja"
+      }
+    },
     // Edit this step to customize the git repository to use
     {
       method: "shell.run",
       params: {
         message: [
-          "git clone https://github.com/Tencent/Hunyuan3D-2 app",
+          "git clone https://github.com/deepbeepmeep/Hunyuan3D-2GP app",
         ]
       }
     },
@@ -28,7 +34,7 @@ module.exports = {
         venv: "env",                // Edit this to customize the venv folder path
         path: "app",                // Edit this to customize the path to start the shell from
         message: [
-          "pip install -r requirements.txt"
+          "uv pip install -r requirements.txt"
         ]
       }
     },
@@ -49,7 +55,7 @@ module.exports = {
         venv: "../../../env",                // Edit this to customize the venv folder path
         path: "app/hy3dgen/texgen/differentiable_renderer",                // Edit this to customize the path to start the shell from
         message: [
-          "{{ platform === 'win32' ? 'python setup.py install' : 'bash compile_mesh_painter.sh'}}"
+          "python setup.py install"
         ]
       }
     },
