@@ -4,8 +4,8 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-//          "conda install -y -c conda-forge ninja",
-          "conda install -y -c anaconda vs2019_win-64"
+          "conda install -y -c conda-forge ninja",
+//          "conda install -y -c anaconda vs2019_win-64"
         ]
       }
     },
