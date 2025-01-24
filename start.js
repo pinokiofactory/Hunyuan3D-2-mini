@@ -8,13 +8,13 @@ module.exports = {
         env: { },                   // Edit this to customize environment variables (see documentation)
         path: "app",                // Edit this to customize the path to start the shell from
         message: [
-          "python gradio_app.py --host=127.0.0.1 --profile {{args.profile}}"
+          "python gradio_app.py --profile {{args.profile}}"
         ],
         on: [{
           // The regular expression pattern to monitor.
           // When this pattern occurs in the shell terminal, the shell will return,
           // and the script will go onto the next step.
-          "event": "/http:\/\/\\S+/",   
+          "event": "/http:\/\/\\[0-9.:]+/",   
 
           // "done": true will move to the next step while keeping the shell alive.
           // "kill": true will move to the next step after killing the shell.
