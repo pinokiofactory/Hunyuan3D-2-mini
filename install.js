@@ -1,15 +1,24 @@
 module.exports = {
   run: [
+//    {
+//      method: "shell.run",
+//      params: {
+//        message: [
+//          "conda install -y -c conda-forge ninja",
+////          "conda install -y -c anaconda vs2019_win-64"
+//        ]
+//      }
+//    },
+    // Edit this step to customize the git repository to use
     {
+      when: "{{platform === 'win32'}}",
       method: "shell.run",
       params: {
         message: [
-          "conda install -y -c conda-forge ninja",
-//          "conda install -y -c anaconda vs2019_win-64"
+          "echo %PATH%"
         ]
       }
     },
-    // Edit this step to customize the git repository to use
     {
       method: "shell.run",
       params: {
