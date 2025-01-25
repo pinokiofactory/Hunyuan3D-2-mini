@@ -56,6 +56,9 @@ module.exports = {
       method: "shell.run",
       params: {
         venv: "../../../env",                // Edit this to customize the venv folder path
+        env: {
+          DISTUTILS_USE_SDK: 1
+        },
         path: "app/hy3dgen/texgen/custom_rasterizer",                // Edit this to customize the path to start the shell from
         message: [
           "python setup.py install"
@@ -66,6 +69,9 @@ module.exports = {
       method: "shell.run",
       params: {
         venv: "../../../env",                // Edit this to customize the venv folder path
+        env: {
+          DISTUTILS_USE_SDK: 1
+        },
         path: "app/hy3dgen/texgen/differentiable_renderer",                // Edit this to customize the path to start the shell from
         message: [
           "python setup.py install"
