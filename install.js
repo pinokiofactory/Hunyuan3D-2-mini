@@ -23,8 +23,8 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "git clone https://github.com/deepbeepmeep/Hunyuan3D-2GP app",
-          //"git clone https://github.com/Tencent/Hunyuan3D-2 app"
+          //"git clone https://github.com/deepbeepmeep/Hunyuan3D-2GP app",
+          "git clone https://github.com/Tencent/Hunyuan3D-2 app"
         ]
       }
     },
